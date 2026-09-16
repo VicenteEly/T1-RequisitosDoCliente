@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 
 
@@ -6,7 +6,7 @@ public abstract class Colaborador {
 
     private String matricula;
     private String nome;
-    private Double SalarioBase;
+    private double salarioBase;
     private String tipoColaborador;
 
 
@@ -16,20 +16,22 @@ public abstract class Colaborador {
 
         this.matricula = matriculaColaborador;
         this.nome = nomeDoColaborador;
-        this.SalarioBase = salarioBaseDoColaborador;
+        this.salarioBase = salarioBaseDoColaborador;
         this.tipoColaborador = tipoDeColaborador;
 
-        if (nome.trim().isEmpty()){
-            throw new IllegalArgumentException("Erro! Categoria (nome) não preenchida.");
+        if (nome == null || nome.trim().isEmpty()){ // Precisa do perador logico (|| = OU) pois apenas, 'nome.trim().isEmpty()' assum que o nome não será null
+            throw new IllegalArgumentException("Erro! O nome do colaborador é obrigatório.");
         }
-        if (SalarioBase < 0) {
+        if (salarioBase < 0) {
             throw new IllegalArgumentException("Erro! O Valor do salario está incorreto.");
         }
     }
+
+
     public abstract double calculaAdicionais();
 
     public double calculaSalarioTotal(){
-        double salarioTotal = (SalarioBase + calculaAdicionais());
+        double salarioTotal = (salarioBase + calculaAdicionais());
         return salarioTotal;
     }
 
@@ -38,15 +40,12 @@ public abstract class Colaborador {
     }
 
     public void setTipoColaborador(String tipoColaborador) {
+
         this.tipoColaborador = tipoColaborador;
     }
 
     public String getMatricula() {
         return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
     }
 
     public String getNome() {
@@ -58,11 +57,11 @@ public abstract class Colaborador {
     }
 
     public Double getSalarioBase() {
-        return SalarioBase;
+        return salarioBase;
     }
 
     public void setSalarioBase(Double salarioBase) {
-        SalarioBase = salarioBase;
+        this.salarioBase = salarioBase;
     }
 
 

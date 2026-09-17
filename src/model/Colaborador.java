@@ -9,7 +9,7 @@ public abstract class Colaborador {
     private double salarioBase;
 
 
-    public Colaborador() {
+    public Colaborador(String matriculaColaborador, String nomeDoColaborador, double salarioBaseDoColaborador) {
 
         setNome(nomeDoColaborador);
         setSalarioBase(salarioBaseDoColaborador);

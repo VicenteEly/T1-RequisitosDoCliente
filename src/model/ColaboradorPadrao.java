@@ -3,8 +3,8 @@ package model;
 public class ColaboradorPadrao extends Colaborador{
 
 
-    public ColaboradorPadrao (String matriculaColaboradorPadrao, String nomeColaboradorPadrao, double salarioColaboradorPadrao){
-       super();
+    public ColaboradorPadrao(String matricula, String nome, double salarioBase){
+       super(matricula, nome, salarioBase);
 
     }
 

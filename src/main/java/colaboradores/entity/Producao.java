@@ -24,4 +24,7 @@ public class Producao {
 
     @Column(name = "total")
     private BigDecimal total;
+
+    @Column(name = "idMatricula")
+    private String matriculaColaborador;
 }

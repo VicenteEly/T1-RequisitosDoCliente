@@ -7,13 +7,16 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 
 @Table(name = "colaboradores")
-@Entity
+@Entity  //Define a classe como uma entidade
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class Colaboradores {
 
-    @Column(name = "matricula")
+    @Id
+    @OneToOne
+    @Column(name = "matricula") //@Column tem que estar colada com a variavel que se refere.
     private String matricula;
 
     @Column(name = "nome")
@@ -22,7 +25,7 @@ public class Colaboradores {
     @Column(name = "salario")
     private BigDecimal salario;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING) //Enumerated(EnumType.) Declara qual tipo de dado o Enum pertence ( String ou Integer )
     @Column(name = "tipo")
     private TipoColaboradorEnum tipoColaborador;
 }

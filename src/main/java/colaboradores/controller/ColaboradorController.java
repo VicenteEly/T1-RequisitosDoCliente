@@ -22,8 +22,4 @@ public class ColaboradorController {
     public ResponseEntity<List<Colaboradores>> getAllColaboradores(){
         return ResponseEntity.ok(colaboradorService.getAllColaboradores());
     }
-
-
 }
-
-

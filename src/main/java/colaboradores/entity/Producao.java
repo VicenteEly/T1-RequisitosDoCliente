@@ -1,9 +1,7 @@
 package colaboradores.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -12,6 +10,8 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Getter
+@Setter
 public class Producao {
 
     @Column(name = "quantidadeProduzida")
@@ -25,4 +25,5 @@ public class Producao {
 
     @Column(name = "idMatricula")
     private String matriculaColaborador;
+
 }

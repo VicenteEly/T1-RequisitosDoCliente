@@ -19,7 +19,7 @@ public class PagamentoController {
      private PagamentoService pagamentoService;
 
     @PostMapping
-    public ResponseEntity<Comissao> postComissao(Comissao comissao){
+    public ResponseEntity<Comissao> postComissao(Comissao comissao){ //Funcao
         return ResponseEntity.ok(pagamentoService.postComissao(comissao));
     }
 

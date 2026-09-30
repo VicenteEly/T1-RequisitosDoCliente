@@ -6,7 +6,7 @@ import colaboradores.entity.TipoColaboradorEnum;
 import colaboradores.repository.ComissaoRepository;
 import colaboradores.repository.ProducaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-
+@service
 public class PagamentoService {
        @Autowired
     private ComissaoRepository comissaoRepository;

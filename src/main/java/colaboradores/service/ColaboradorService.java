@@ -6,7 +6,7 @@ import colaboradores.repository.ColaboradorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
-
+@service
 public class ColaboradorService {
     @Autowired
     private ColaboradorRepository colaboradorRepository;
